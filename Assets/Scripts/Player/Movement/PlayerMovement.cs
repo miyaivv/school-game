@@ -7,6 +7,11 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float movementSpeed;
 
+    public float gravity = -9.81f;
+
+    Vector3 velocity;
+
+
     void Update()
     {
         float x = Input.GetAxis("Horizontal");
@@ -15,6 +20,10 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
 
         controller.Move(move * movementSpeed * Time.deltaTime);
+
+        velocity.y += gravity * Time.deltaTime;
+
+        controller.Move(velocity * Time.deltaTime);
     }
 }
 
