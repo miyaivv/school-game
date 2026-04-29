@@ -1954,7 +1954,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   controller: {fileID: 1883384525}
   movementSpeed: 6
-  gravity: -9
+  gravity: -5
+  jumpHeight: 1.5
   groundCheck: {fileID: 1886995303}
   groundDistance: 0.4
   groundMask:
