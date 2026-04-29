@@ -9,11 +9,18 @@ public class PlayerMovement : MonoBehaviour
 
     public float gravity = -9.81f;
 
+    public Transform groundCheck; 
+    public float groundDistance = 0.4f;
+    public LayerMask groundMask;
+
     Vector3 velocity;
+    bool isGrounded;
 
 
     void Update()
     {
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
