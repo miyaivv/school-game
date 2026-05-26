@@ -3,6 +3,9 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] GameManager gameManager;
+
+
    public CharacterController controller;
 
     [SerializeField] private float movementSpeed;
@@ -19,25 +22,28 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if ((isGrounded) && (velocity.y < 0))
+        if (gameManager.canMove == true)
         {
-            velocity.y = -2f;
-        }
+            if ((isGrounded) && (velocity.y < 0))
+            {
+                velocity.y = -2f;
+            }
 
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z;
+            Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move * movementSpeed * Time.deltaTime);
+            controller.Move(move * movementSpeed * Time.deltaTime);
 
-        velocity.y += gravity * Time.deltaTime;
+            velocity.y += gravity * Time.deltaTime;
 
-        controller.Move(velocity * Time.deltaTime);
+            controller.Move(velocity * Time.deltaTime);
 
-        Jump();
+            Jump();
+        } 
     }
 
     private void Jump()
