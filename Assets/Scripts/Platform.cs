@@ -1,11 +1,12 @@
+using System;
 using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-
     public LayerMask cubeMask;
     
-    [SerializeField] float cubesFound = 0;
+    [SerializeField] public float cubesFound = 0;
+
    
     private void OnCollisionEnter(Collision collision)
     {
@@ -15,5 +16,10 @@ public class Platform : MonoBehaviour
 
             cubesFound ++;
         } 
+    }
+
+    public void ResetScore ()
+    {
+        cubesFound = 0;
     }
 }
