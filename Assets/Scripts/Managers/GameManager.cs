@@ -51,6 +51,11 @@ public class GameManager : MonoBehaviour
         box2.transform.position = initialPos2;
         box3.transform.position = initialPos3;
         box4.transform.position = initialPos4;
+
+        box1.SetActive(true);
+        box2.SetActive(true);
+        box3.SetActive(true);
+        box4.SetActive(true);
     }
 
     public void EndGame()
