@@ -872,6 +872,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225317289}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &256526710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4344282278520820020, guid: 3325910904d741c4faf2cc3d607fcbe9, type: 3}
+  m_PrefabInstance: {fileID: 1033842637}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &287877130
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,8 +952,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 584, y: 177}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 576.8584, y: 183.75482}
+  m_SizeDelta: {x: 155.7116, y: 35.2229}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &291387508
 MonoBehaviour:
@@ -2418,11 +2423,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   UIManager: {fileID: 1975717818}
-  Platform: {fileID: 1385539443}
-  box1: {fileID: 0}
-  box2: {fileID: 0}
-  box3: {fileID: 0}
-  player: {fileID: 0}
+  platform: {fileID: 1385539443}
+  box1: {fileID: 1395159614}
+  box2: {fileID: 2063796930}
+  box3: {fileID: 1520401976}
+  box4: {fileID: 795824472}
+  player: {fileID: 256526710}
   canMove: 1
 --- !u!4 &1029857673
 Transform:
@@ -3634,8 +3640,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 584, y: 177}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 584, y: 182.96927}
+  m_SizeDelta: {x: 160, y: 34.6155}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1752520883
 MonoBehaviour:
@@ -4071,7 +4077,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   platform: {fileID: 1385539443}
   scoreUI: {fileID: 1703894727}
-  isConnected: 0
+  StartMenuUI: {fileID: 0}
+  EndMenuUI: {fileID: 0}
 --- !u!4 &1975717819
 Transform:
   m_ObjectHideFlags: 0

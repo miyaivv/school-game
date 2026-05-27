@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -6,7 +7,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] Platform platform;
 
     [SerializeField] private TextMeshProUGUI scoreUI;
-    public bool isConnected;
+
+    [SerializeField] public GameObject StartMenuUI;
+    [SerializeField] public GameObject EndMenuUI;
+
 
     private void Update()
     {
