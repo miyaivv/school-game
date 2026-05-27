@@ -14,7 +14,7 @@ public class CameraMovement : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         
     }
 
@@ -37,6 +37,10 @@ public class CameraMovement : MonoBehaviour
         if (gameManager.canMove == false)
         {
             Cursor.lockState -= CursorLockMode.Locked;
+        } 
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
     }

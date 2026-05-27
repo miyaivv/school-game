@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         canMove = true;
-        //UIManager.StartMenuUI.SetActive(true);
        
         initialPosPL = player.transform.position;
         initialPos1 = box1.transform.position;
@@ -56,6 +55,8 @@ public class GameManager : MonoBehaviour
         box2.SetActive(true);
         box3.SetActive(true);
         box4.SetActive(true);
+
+        UIManager.EndMenuUI.SetActive(false);
     }
 
     public void EndGame()

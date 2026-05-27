@@ -2898,7 +2898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Platform
   cubeMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   cubesFound: 0
 --- !u!1 &1395159614 stripped
 GameObject:
@@ -4076,9 +4076,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   platform: {fileID: 1385539443}
+  gameManager: {fileID: 1029857672}
   scoreUI: {fileID: 1703894727}
-  StartMenuUI: {fileID: 0}
-  EndMenuUI: {fileID: 0}
+  StartMenuUI: {fileID: 928471353}
+  EndMenuUI: {fileID: 1990796145}
+  startBnt: {fileID: 291387508}
 --- !u!4 &1975717819
 Transform:
   m_ObjectHideFlags: 0
