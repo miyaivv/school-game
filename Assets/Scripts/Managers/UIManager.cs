@@ -14,11 +14,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] public GameObject EndMenuUI;
 
     public Button startBnt;
+    public Button endBtn;
 
     void Awake()
     {
-        Button btn = startBnt.GetComponent<Button>();
-        btn.onClick.AddListener(gameManager.RestartGame);
+        Button startbtn = startBnt.GetComponent<Button>();
+        startbtn.onClick.AddListener(gameManager.StartGame);
+
+        Button endbtn = endBtn.GetComponent<Button>();
+        endbtn.onClick.AddListener(gameManager.RestartGame);
     }
 
     private void Update()
@@ -30,5 +34,4 @@ public class UIManager : MonoBehaviour
     {
         scoreUI.text = platform.cubesFound + " / 4";
     }
-
 }

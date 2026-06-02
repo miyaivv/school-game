@@ -17,9 +17,4 @@ public class Platform : MonoBehaviour
             cubesFound ++;
         } 
     }
-
-    public void ResetScore ()
-    {
-        cubesFound = 0;
-    }
 }
