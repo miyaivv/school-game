@@ -25,8 +25,8 @@ public class UIManager : MonoBehaviour
         Button endbtn = endBtn.GetComponent<Button>();
         endbtn.onClick.AddListener(gameManager.RestartGame);
 
-        Button quitbtn = endBtn.GetComponent<Button>();
-        quitbtn.onClick.AddListener(Quit);
+        Button quitbtn = quitBtn.GetComponent<Button>();
+        quitbtn.onClick.AddListener(gameManager.QuitGame);
     }
 
     private void Update()
@@ -39,8 +39,5 @@ public class UIManager : MonoBehaviour
         scoreUI.text = platform.cubesFound + " / 4";
     }
 
-    private void Quit()
-    {
-        Application.Quit();
-    }
+    
 }

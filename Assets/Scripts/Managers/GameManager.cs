@@ -38,4 +38,9 @@ public class GameManager : MonoBehaviour
         canMove = false;
         UIManager.EndMenuUI.SetActive(true);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
