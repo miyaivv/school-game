@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
 
     public Button startBnt;
     public Button endBtn;
+    public Button quitBtn;
 
     void Awake()
     {
@@ -23,6 +24,9 @@ public class UIManager : MonoBehaviour
 
         Button endbtn = endBtn.GetComponent<Button>();
         endbtn.onClick.AddListener(gameManager.RestartGame);
+
+        Button quitbtn = endBtn.GetComponent<Button>();
+        quitbtn.onClick.AddListener(Quit);
     }
 
     private void Update()
@@ -33,5 +37,10 @@ public class UIManager : MonoBehaviour
     private void OnGUI()
     {
         scoreUI.text = platform.cubesFound + " / 4";
+    }
+
+    private void Quit()
+    {
+        Application.Quit();
     }
 }
